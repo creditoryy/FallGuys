@@ -1,0 +1,94 @@
+# Quick Setup Card - Arduino IDE Version
+
+**For: Communication Hub ESP32**  
+**Your MAC**: `EC:E3:34:DA:5D:B4`
+
+---
+
+## 🚀 5-Minute Setup
+
+### 1️⃣ Install Arduino IDE
+Download: https://www.arduino.cc/en/software
+
+### 2️⃣ Add ESP32 Support
+**File → Preferences → Additional Board Manager URLs:**
+```
+https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+```
+
+**Tools → Board → Boards Manager → Install "esp32"**
+
+### 3️⃣ Open the File
+Open: `FallGuys_Hub_Receiver.ino`
+
+### 4️⃣ Configure
+- **Tools → Board → ESP32 Dev Module**
+- **Tools → Upload Speed → 921600**
+- **Tools → Port → [Your COM Port]**
+
+### 5️⃣ Upload
+1. Click **→ (Upload)** button
+2. Wait for "Done uploading"
+
+### 6️⃣ Monitor
+1. **Tools → Serial Monitor**
+2. Set baud: **115200**
+3. Press **RST** on ESP32
+
+---
+
+## ✅ Success Indicators
+
+You should see:
+```
+✓ ESP-NOW initialized
+✓ Peer added successfully
+✓ Hub Ready - Waiting for sensor data...
+```
+
+When wearable sends data:
+```
+[RX #1] Sensor Data Received
+Accel: X=0.12 Y=0.23 Z=9.81 m/s²
+[TX] ✓ Fall status sent successfully
+```
+
+---
+
+## 🐛 Quick Troubleshooting
+
+**Can't upload?**
+→ Close Serial Monitor, hold BOOT button
+
+**No COM port?**
+→ Install USB driver (CH340/CP2102)
+
+**No data received?**
+→ Check wearable is running and close by
+
+---
+
+## 📁 File Location
+```
+FallGuys/
+└── communication-hub/
+    └── esp32/
+        ├── FallGuys_Hub_Receiver.ino  ← This file
+        └── ARDUINO_IDE_SETUP.md       ← Full guide
+```
+
+---
+
+## 📞 Configuration Details
+
+✅ **Already configured for you:**
+- Your MAC: `EC:E3:34:DA:5D:B4`
+- Wearable MAC: `EC:E3:34:DB:95:30`
+- WiFi Channel: 1
+- Baud Rate: 115200
+
+**Nothing to change - just upload!** 🎉
+
+---
+
+**Full guide**: See `ARDUINO_IDE_SETUP.md`
